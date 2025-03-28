@@ -1,4 +1,4 @@
-# mlkit-barcode-scanning
+# @capacitor-mlkit/barcode-scanning
 
 Unofficial Capacitor plugin for [ML Kit Barcode Scanning](https://developers.google.com/ml-kit/vision/barcode-scanning).[^1][^2]
 
@@ -29,7 +29,7 @@ A working example can be found here: [https://github.com/robingenz/capacitor-mlk
 ## Installation
 
 ```bash
-npm install mlkit-barcode-scanning
+npm install @capacitor-mlkit/barcode-scanning
 npx cap sync
 ```
 
@@ -107,7 +107,7 @@ import {
   BarcodeScanner,
   BarcodeFormat,
   LensFacing,
-} from 'mlkit-barcode-scanning';
+} from '@capacitor-mlkit/barcode-scanning';
 import { Torch } from '@capawesome/capacitor-torch';
 
 const startScan = async () => {

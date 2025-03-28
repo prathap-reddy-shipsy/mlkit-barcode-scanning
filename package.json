@@ -1,5 +1,5 @@
 {
-  "name": "mlkit-barcode-scanning",
+  "name": "@capacitor-mlkit/barcode-scanning",
   "version": "7.1.0",
   "description": "Capacitor plugin for ML Kit Barcode Scanning.",
   "main": "dist/plugin.cjs.js",

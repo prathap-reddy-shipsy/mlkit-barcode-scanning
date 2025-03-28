@@ -27,7 +27,7 @@ platform :ios, '15.5'
 on **Android**, the image resolution used for barcode scanning has been increased to `1280x720` to improve the barcode scanning performance and be consistent with the iOS implementation. Previously, the resolution was `640x480`. You can change the resolution by setting the `resolution` option when calling the `startScan` method.
 
 ```typescript
-import { BarcodeScanner, Resolution } from 'mlkit-barcode-scanning';
+import { BarcodeScanner, Resolution } from '@capacitor-mlkit/barcode-scanning';
 
 const startScan = async () => {
   await BarcodeScanner.startScan({
@@ -65,7 +65,7 @@ This plugin now supports Capacitor 5 only. Please run `npx cap sync` after updat
 If you want to use this plugin with Capacitor 4, please install version `0.0.3`:
 
 ```
-npm i mlkit-barcode-scanning@0.0.3
+npm i @capacitor-mlkit/barcode-scanning@0.0.3
 ```
 
 ### Corner Points
