@@ -1,4 +1,4 @@
-# @capacitor-mlkit/barcode-scanning
+# mlkit-barcode-scanning
 
 Unofficial Capacitor plugin for [ML Kit Barcode Scanning](https://developers.google.com/ml-kit/vision/barcode-scanning).[^1][^2]
 
@@ -29,7 +29,7 @@ A working example can be found here: [https://github.com/robingenz/capacitor-mlk
 ## Installation
 
 ```bash
-npm install @capacitor-mlkit/barcode-scanning
+npm install mlkit-barcode-scanning
 npx cap sync
 ```
 
@@ -107,7 +107,7 @@ import {
   BarcodeScanner,
   BarcodeFormat,
   LensFacing,
-} from '@capacitor-mlkit/barcode-scanning';
+} from 'mlkit-barcode-scanning';
 import { Torch } from '@capawesome/capacitor-torch';
 
 const startScan = async () => {
@@ -720,12 +720,13 @@ Remove all listeners for this plugin.
 
 #### StartScanOptions
 
-| Prop               | Type                                              | Description                                                                                                                 | Default                             | Since |
-| ------------------ | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ----- |
-| **`formats`**      | <code>BarcodeFormat[]</code>                      | Improve the speed of the barcode scanner by configuring the barcode formats to scan for. Only available on Android and iOS. |                                     | 0.0.1 |
-| **`lensFacing`**   | <code><a href="#lensfacing">LensFacing</a></code> | Configure the camera (front or back) to use.                                                                                |                                     | 0.0.1 |
-| **`resolution`**   | <code><a href="#resolution">Resolution</a></code> | Configure the resolution of the captured image that is used for barcode scanning. Only available on Android and iOS.        | <code>Resolution['1280x720']</code> | 7.0.0 |
-| **`videoElement`** | <code>HTMLVideoElement</code>                     | The HTML video element to use for the camera preview. Only available on web.                                                |                                     | 7.1.0 |
+| Prop                   | Type                                              | Description                                                                                                                 | Default                             | Since |
+| ---------------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ----- |
+| **`formats`**          | <code>BarcodeFormat[]</code>                      | Improve the speed of the barcode scanner by configuring the barcode formats to scan for. Only available on Android and iOS. |                                     | 0.0.1 |
+| **`lensFacing`**       | <code><a href="#lensfacing">LensFacing</a></code> | Configure the camera (front or back) to use.                                                                                |                                     | 0.0.1 |
+| **`resolution`**       | <code><a href="#resolution">Resolution</a></code> | Configure the resolution of the captured image that is used for barcode scanning. Only available on Android and iOS.        | <code>Resolution['1280x720']</code> | 7.0.0 |
+| **`screenResolution`** | <code>string</code>                               | Configure the resolution of the captured image that is used for barcode scanning. Only available on Android and iOS.        | <code>Resolution['1280x720']</code> | 7.0.0 |
+| **`videoElement`**     | <code>HTMLVideoElement</code>                     | The HTML video element to use for the camera preview. Only available on web.                                                |                                     | 7.1.0 |
 
 
 #### ReadBarcodesFromImageResult
