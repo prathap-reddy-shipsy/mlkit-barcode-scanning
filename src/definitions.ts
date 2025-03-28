@@ -233,7 +233,7 @@ export interface StartScanOptions {
    * Only available on Android and iOS.
    *
    * @since 7.0.0
-   * @default Resolution['1280x720']
+   * @default '1280x720'
    */
    screenResolution?: string;
   /**
