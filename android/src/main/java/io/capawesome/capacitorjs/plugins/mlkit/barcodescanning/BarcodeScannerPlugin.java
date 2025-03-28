@@ -77,7 +77,31 @@ public class BarcodeScannerPlugin extends Plugin {
             ScanSettings scanSettings = new ScanSettings();
             scanSettings.formats = formats;
             scanSettings.lensFacing = lensFacing;
-            scanSettings.resolution = BarcodeScannerHelper.convertIntegerToResolution(call.getInt("resolution", 1));
+
+            // Handle both resolution and screenResolution parameters
+            Integer resolution = call.getInt("resolution", 1);
+            String screenResolution = call.getString("screenResolution");
+            
+            if (screenResolution != null) {
+                // Parse screenResolution string (e.g. "1280x720")
+                String[] dimensions = screenResolution.split("x");
+                if (dimensions.length == 2) {
+                    try {
+                        int width = Integer.parseInt(dimensions[0]);
+                        int height = Integer.parseInt(dimensions[1]);
+                        scanSettings.resolution = new Size(width, height);
+                    } catch (NumberFormatException e) {
+                        // If parsing fails, fall back to default resolution
+                        scanSettings.resolution = BarcodeScannerHelper.convertIntegerToResolution(resolution);
+                    }
+                } else {
+                    // If format is invalid, fall back to default resolution
+                    scanSettings.resolution = BarcodeScannerHelper.convertIntegerToResolution(resolution);
+                }
+            } else {
+                // Use the numeric resolution parameter
+                scanSettings.resolution = BarcodeScannerHelper.convertIntegerToResolution(resolution);
+            }
 
             boolean granted = implementation.requestCameraPermissionIfNotDetermined(call);
             if (!granted) {

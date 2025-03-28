@@ -227,6 +227,15 @@ export interface StartScanOptions {
    * @default Resolution['1280x720']
    */
   resolution?: Resolution;
+   /**
+   * Configure the resolution of the captured image that is used for barcode scanning.
+   *
+   * Only available on Android and iOS.
+   *
+   * @since 7.0.0
+   * @default Resolution['1280x720']
+   */
+   screenResolution?: string;
   /**
    * The HTML video element to use for the camera preview.
    *
