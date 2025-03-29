@@ -511,22 +511,6 @@
           "type": "Resolution"
         },
         {
-          "name": "screenResolution",
-          "tags": [
-            {
-              "text": "7.0.0",
-              "name": "since"
-            },
-            {
-              "text": "Resolution['1280x720']",
-              "name": "default"
-            }
-          ],
-          "docs": "Configure the resolution of the captured image that is used for barcode scanning.\n\nOnly available on Android and iOS.",
-          "complexTypes": [],
-          "type": "string | undefined"
-        },
-        {
           "name": "videoElement",
           "tags": [
             {
